@@ -34,12 +34,28 @@
     },
     "paths": {
         "/todolist": {
-            "get": {},
-            "post": {}
+            "get": {
+                "summary": "Get All TodoList",
+                "description": "Get all active todolist by default",
+                "responses": {}
+            },
+            "post": {
+                "summary": "Create new Todolist",
+                "description": "Create new Todolist to database",
+                "responses": {}
+            }
         },
         "/todolist/{todolistId}": {
-            "put": {},
-            "delete": {}
+            "put": {
+                "summary": "Update exisiting todolist",
+                "description": "Update existing todolist in database",
+                "responses": {}
+            },
+            "delete": {
+                "summary": "Delete existing todolist",
+                "description": "Delete existing todolist in database",
+                "responses": {}
+            }
         }
     }
 }
