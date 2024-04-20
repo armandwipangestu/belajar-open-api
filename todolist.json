@@ -37,6 +37,22 @@
             "get": {
                 "summary": "Get All TodoList",
                 "description": "Get all active todolist by default",
+                "parameters": [
+                    {
+                        "name": "include_done",
+                        "in": "query",
+                        "description": "Include done todolist in the result",
+                        "required": false,
+                        "schema": {}
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Filter todolist by name",
+                        "required": false,
+                        "schema": {}
+                    }
+                ],
                 "responses": {}
             },
             "post": {
@@ -49,11 +65,29 @@
             "put": {
                 "summary": "Update exisiting todolist",
                 "description": "Update existing todolist in database",
+                "parameters": [
+                    {
+                        "name": "todolistId",
+                        "in": "path",
+                        "description": "Todolist id for updated",
+                        "required": true,
+                        "schema": {}
+                    }
+                ],
                 "responses": {}
             },
             "delete": {
                 "summary": "Delete existing todolist",
                 "description": "Delete existing todolist in database",
+                "parameters": [
+                    {
+                        "name": "todolistId",
+                        "in": "path",
+                        "description": "Todolist id for deleted",
+                        "required": true,
+                        "schema": {}
+                    }
+                ],
                 "responses": {}
             }
         }
