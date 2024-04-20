@@ -32,9 +32,16 @@
         "description": "Youtube Programmer Zaman Now",
         "url": "https://www.youtube.com/c/ProgrammerZamanNow"
     },
+    "tags": [
+        {
+            "name": "todolist",
+            "description": "Everything about todolist"
+        }
+    ],
     "paths": {
         "/todolist": {
             "get": {
+                "tags": ["todolist"],
                 "summary": "Get All TodoList",
                 "description": "Get all active todolist by default",
                 "parameters": [
@@ -65,6 +72,7 @@
                 "responses": {}
             },
             "post": {
+                "tags": ["todolist"],
                 "summary": "Create new Todolist",
                 "description": "Create new Todolist to database",
                 "requestBody": {
@@ -96,6 +104,7 @@
         },
         "/todolist/{todolistId}": {
             "put": {
+                "tags": ["todolist"],
                 "summary": "Update exisiting todolist",
                 "description": "Update existing todolist in database",
                 "parameters": [
@@ -137,6 +146,7 @@
                 "responses": {}
             },
             "delete": {
+                "tags": ["todolist"],
                 "summary": "Delete existing todolist",
                 "description": "Delete existing todolist in database",
                 "parameters": [
