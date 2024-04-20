@@ -15,6 +15,18 @@
             "url": "https://www.apache.org/licenses/LICENSE-2.0"
         }
     },
-    "servers": [],
+    "servers": [
+        {
+            "description": "Todolist RESTful API Server",
+            "url": "https://{environment}.programmerzamannow.com/api/v1",
+            "variables": {
+                "environment": {
+                    "description": "Server Environment",
+                    "default": "dev",
+                    "enum": ["dev", "qa", "prod"]
+                }
+            }
+        }
+    ],
     "paths": {}
 }
