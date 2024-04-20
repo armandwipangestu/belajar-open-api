@@ -71,7 +71,23 @@
                     "required": true,
                     "content": {
                         "application/json": {
-                            "schema": {}
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "required": true
+                                    },
+                                    "priority": {
+                                        "type": "integer",
+                                        "format": "int32",
+                                        "default": 1,
+                                        "minimum": 1,
+                                        "required": true
+                                    }
+                                }
+                            }
                         }
                     }
                 },
@@ -99,7 +115,22 @@
                     "required": true,
                     "content": {
                         "application/json": {
-                            "schema": {}
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "minimum": 1,
+                                        "required": true
+                                    },
+                                    "priority": {
+                                        "type": "integer",
+                                        "format": "int32",
+                                        "default": 1,
+                                        "required": true
+                                    }
+                                }
+                            }
                         }
                     }
                 },
