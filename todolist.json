@@ -43,14 +43,23 @@
                         "in": "query",
                         "description": "Include done todolist in the result",
                         "required": false,
-                        "schema": {}
+                        "schema": {
+                            "type": "boolean",
+                            "nullable": true,
+                            "default": false
+                        }
                     },
                     {
                         "name": "name",
                         "in": "query",
                         "description": "Filter todolist by name",
                         "required": false,
-                        "schema": {}
+                        "schema": {
+                            "type": "string",
+                            "nullable": true,
+                            "minLength": 1,
+                            "maxLength": 100
+                        }
                     }
                 ],
                 "responses": {}
@@ -71,7 +80,11 @@
                         "in": "path",
                         "description": "Todolist id for updated",
                         "required": true,
-                        "schema": {}
+                        "schema": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 100
+                        }
                     }
                 ],
                 "responses": {}
@@ -85,7 +98,11 @@
                         "in": "path",
                         "description": "Todolist id for deleted",
                         "required": true,
-                        "schema": {}
+                        "schema": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 100
+                        }
                     }
                 ],
                 "responses": {}
