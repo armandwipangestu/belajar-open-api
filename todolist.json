@@ -41,6 +41,11 @@
     "paths": {
         "/todolist": {
             "get": {
+                "security": [
+                    {
+                        "TodolistAuth": []
+                    }
+                ],
                 "tags": ["todolist"],
                 "summary": "Get All TodoList",
                 "description": "Get all active todolist by default",
@@ -112,6 +117,11 @@
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "TodolistAuth": []
+                    }
+                ],
                 "tags": ["todolist"],
                 "summary": "Create new Todolist",
                 "description": "Create new Todolist to database",
@@ -179,6 +189,11 @@
         },
         "/todolist/{todolistId}": {
             "put": {
+                "security": [
+                    {
+                        "TodolistAuth": []
+                    }
+                ],
                 "tags": ["todolist"],
                 "summary": "Update exisiting todolist",
                 "description": "Update existing todolist in database",
@@ -249,6 +264,11 @@
                 }
             },
             "delete": {
+                "security": [
+                    {
+                        "TodolistAuth": []
+                    }
+                ],
                 "tags": ["todolist"],
                 "summary": "Delete existing todolist",
                 "description": "Delete existing todolist in database",
@@ -309,6 +329,14 @@
         }
     },
     "components": {
+        "securitySchemes": {
+            "TodolistAuth": {
+                "description": "Authentication for Todolist RESTful API",
+                "type": "apiKey",
+                "in": "header",
+                "name": "X-API-Key"
+            }
+        },
         "parameters": {
             "TodolistId": {
                 "name": "todolistId",
